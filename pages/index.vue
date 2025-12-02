@@ -24,12 +24,6 @@
         </div>
       </div>
 
-    <div class="absolute inset-0 z-0 pointer-events-none">
-    <div class="shape w-16 h-16 bg-blue-300 rounded-full opacity-30 absolute"></div>
-    <div class="shape w-20 h-20 bg-green-300 rounded-full opacity-30 absolute"></div>
-    <div class="shape w-12 h-12 bg-yellow-300 rounded-full opacity-30 absolute"></div>
-
-  </div>
     </section>
 
     <section class="py-20 px-6 bg-white">
@@ -125,22 +119,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-import * as animejs from 'animejs'
-const anime = animejs.default || animejs
 
-onMounted(() => {
-  anime({
-    targets: '.shape',
-    translateX: () => Math.random() * 200 - 100,
-    translateY: () => Math.random() * 200 - 100,
-    rotate: () => Math.random() * 360 - 180,
-    duration: () => Math.random() * 4000 + 4000,
-    direction: 'alternate',
-    loop: true,
-    easing: 'easeInOutSine'
-  })
-})
 </script>
 
 <style scoped>
@@ -155,12 +134,6 @@ onMounted(() => {
   }
 }
 
-.shape {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
 .animate-slide-up {
   animation: slide-up 0.8s ease-out;
