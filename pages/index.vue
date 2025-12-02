@@ -23,6 +23,13 @@
           </NuxtLink>
         </div>
       </div>
+
+    <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="shape w-16 h-16 bg-blue-300 rounded-full opacity-30 absolute"></div>
+    <div class="shape w-20 h-20 bg-green-300 rounded-full opacity-30 absolute"></div>
+    <div class="shape w-12 h-12 bg-yellow-300 rounded-full opacity-30 absolute"></div>
+
+  </div>
     </section>
 
     <section class="py-20 px-6 bg-white">
@@ -97,14 +104,14 @@
     </div>
     <div class="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 group">
       <div class="h-48 bg-slate-200 group-hover:bg-slate-300 transition-colors duration-300">
-        <img src="../assets/image_abstraite.png" alt="image décorative" class="w-full h-full object-cover">
+        <img src="../assets/Epimon.png" alt="image décorative" class="w-full h-full object-cover">
       </div>
       <div class="p-6">
         <h3 class="text-2xl font-semibold text-slate-900 mb-2">
-          Mon Portfolio
+          Epimon
         </h3>
         <p class="text-slate-600 mb-4">
-          Mon portfolio est aussi en projet sur lequel je suis en constante évolution et à la recherche de la meilleure version de ma page web.
+          Epimon est un jeu codé en java, inspiré de pokémon conçu par moi et deux de mes amis dans lequel il est possible de choisir son starter et combattre des dresseurs.
         </p>
         <div class="flex gap-2 flex-wrap">
           <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Vue 3</span>
@@ -118,6 +125,22 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
+import * as animejs from 'animejs'
+const anime = animejs.default || animejs
+
+onMounted(() => {
+  anime({
+    targets: '.shape',
+    translateX: () => Math.random() * 200 - 100,
+    translateY: () => Math.random() * 200 - 100,
+    rotate: () => Math.random() * 360 - 180,
+    duration: () => Math.random() * 4000 + 4000,
+    direction: 'alternate',
+    loop: true,
+    easing: 'easeInOutSine'
+  })
+})
 </script>
 
 <style scoped>
@@ -130,6 +153,13 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.shape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .animate-slide-up {
