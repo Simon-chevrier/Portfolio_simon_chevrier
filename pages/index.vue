@@ -97,7 +97,7 @@
       </a>
     </div>
     <div class="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 group">
-      <a href="https://github.com/Yougooooo/EPIMON"></a>
+      <a href="https://github.com/Yougooooo/EPIMON">
       <div class="h-48 bg-slate-200 group-hover:bg-slate-300 transition-colors duration-300">
         <img src="../assets/Epimon.png" alt="image décorative" class="w-full h-full object-cover">
       </div>
@@ -112,6 +112,7 @@
           <span class="px-3 py-1 bg-slate-100 text-slate-700 text-sm rounded-full">Vue 3</span>
         </div>
       </div>
+      </a>
     </div>
   </div>
 </div>
