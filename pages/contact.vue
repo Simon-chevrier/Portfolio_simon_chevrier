@@ -134,7 +134,7 @@
             <div class="p-6 bg-slate-800 text-white rounded-xl">
               <h3 class="text-xl font-semibold mb-3">Disponibilité</h3>
               <p class="text-slate-300">
-                Je suis actuellement disponible pour de nouveaux projets et activement en recherche d'alternance pour Janvier 2026.
+                Je suis actuellement disponible pour de nouveaux projets.
               </p>
             </div>
           </div>
